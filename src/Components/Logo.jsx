@@ -4,7 +4,7 @@ import LogoMenudaCiba from '../Assets/Img/menudaCiba.png'
 function Logo() {
   return (
     <>
-    <img src={LogoMenudaCiba} alt="Logo Menuda Ciba" />
+    <img className="w-9" src={LogoMenudaCiba} alt="Logo Menuda Ciba" />
     </>
   )
 }
