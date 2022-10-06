@@ -1,8 +1,12 @@
 import React from 'react'
+import Form from '../Components/Form/Form'
 
 function ReserveByAge() {
   return (
-    <div>ReserveByAge</div>
+    <div className='flex justify-center'>
+      <Form/>
+    </div>
+
   )
 }
 

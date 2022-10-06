@@ -1,11 +1,11 @@
 import React from 'react'
 import ButtonTeam from './ButtonTeam'
 import ButtonReserve from './ButtonReserve'
-import './ButtonsBar.css'
+
 
 function ButtonsBar() {
   return (
-    <div className='buttons-bar'>
+    <div className='absolute bottom-44 w-full z-10 h-24 bg-violeta-ciba flex justify-around items-center'>
         <ButtonReserve/>
         <ButtonTeam/>
     </div>
