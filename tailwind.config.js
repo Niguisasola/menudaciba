@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         'violeta-ciba': '#533073',
         'verde-ciba': '#C1D72F',
+        'lila-ciba': '#ae9eb9',
       },
       fontFamily: {
         'koulen': ['Koulen']
