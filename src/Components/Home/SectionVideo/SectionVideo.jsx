@@ -4,7 +4,7 @@ import Video from './Video'
 
 function SectionVideo() {
   return (
-    <div classname="w-full h-auto relative">
+    <div className="w-full h-auto relative">
         <Video/>
         <ButtonsBar/>
     </div>

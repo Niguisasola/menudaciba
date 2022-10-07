@@ -5,7 +5,7 @@ import ButtonReserve from './ButtonReserve'
 
 function ButtonsBar() {
   return (
-    <div className='absolute bottom-44 w-full z-10 h-24 bg-violeta-ciba flex justify-around items-center'>
+    <div className='absolute bottom-0 w-full z-10 h-24 bg-violeta-ciba flex justify-around items-center rounded-tr-[50px]'>
         <ButtonReserve/>
         <ButtonTeam/>
     </div>
