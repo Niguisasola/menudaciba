@@ -5,7 +5,7 @@ import iconTwitter from '../../Assets/Img/Icons/twitter.svg'
 
 function ContainerIcons() {
   return (
-    <div className='display flex justify-around '>
+    <div className='display flex justify-between '>
         <img className='w-10' src={iconFacebook} alt="Facebook" />
         <img className='w-12' src={iconInstagram} alt="Instagram" />
         <img className='w-10' src={iconTwitter} alt="Twitter" />
