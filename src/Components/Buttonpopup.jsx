@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, InputGroupText } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Buttonpopup extends React.Component {
@@ -15,11 +15,10 @@ class Buttonpopup extends React.Component {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
         }
         return (
             <>
-                <Button onClick={this.abrirModal} cllassName="basis-1/4 text-2xl 03">Contáctanos</Button>
+                <Button onClick={this.abrirModal} className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded">Contáctanos</Button>
                 <Modal isOpen={this.state.abierto} style={{ modalStyles }}>
                     <ModalHeader className='d-flex'>
                         <FormGroup className="justify-self-center">
@@ -42,11 +41,11 @@ class Buttonpopup extends React.Component {
                         </FormGroup>
                         <FormGroup className="w-full px-3">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">Mensaje</Label>
-                            <InputGroupText className="no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='info complementaria'></InputGroupText>
+                            <Input className="no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='info complementaria'></Input>
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter className='className="col-sm-6'>
-                        <Button className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded" type="button">Enviar</Button>
+                        <Button className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded" type="button" onClick={this.abrirModal}>Enviar</Button>
                         <Button className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded" type="button" onClick={this.abrirModal}>Volver</Button>
                     </ModalFooter>
                 </Modal>

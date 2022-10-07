@@ -10,15 +10,15 @@ function Header() {
 
             <div className="flex  h-10 w-1.2  content-between items-center justify-between p-4">
                 <Link to="/AboutUs">
-                    <p className="basis-1/4 text-2xl 01">Sobre Nosotr@s</p>
+                    <p className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded">Sobre Nosotr@s</p>
                 </Link>
                 <Link to="/Team">
-                    <p className="basis-1/2 text-2xl 02">Equipo</p>
+                    <p className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded">Equipo</p>
                 </Link>
                 <Link to="/Calendar">
-                    <p className="basis-1/4 text-2xl 03">Calendario</p>
+                    <p className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded">Calendario</p>
                 </Link>
-                <p className="basis-1/2 text-2xl 04"><Buttonpopup /></p>
+                <Buttonpopup />
             </div>
         </div>
     )
