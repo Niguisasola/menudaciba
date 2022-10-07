@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'violeta-ciba': '#533073',
+        'verde-ciba': '#C1D72F',
+        'lila-ciba': '#ae9eb9',
+      },
+      fontFamily: {
+        'koulen': ['Koulen']
+      }
+    },
   },
   plugins: [],
 }
