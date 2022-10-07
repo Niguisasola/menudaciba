@@ -9,7 +9,6 @@ function HomePage() {
   return (
     <div>
       <Header/>
-      <CalendarSetMore/>
       <SectionVideo/>
       <Footer/>
     </div>
