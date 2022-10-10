@@ -1,6 +1,4 @@
 import React from 'react'
-import ButtonTeam from './ButtonTeam'
-import ButtonReserve from './ButtonReserve'
 
 
 function ButtonsBar() {

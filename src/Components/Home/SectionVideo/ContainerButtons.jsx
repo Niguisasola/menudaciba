@@ -1,6 +1,5 @@
 import React from 'react'
 import ButtonReserve from './ButtonReserve'
-import ButtonTeam from './ButtonTeam'
 
 function ContainerButtons() {
   return (

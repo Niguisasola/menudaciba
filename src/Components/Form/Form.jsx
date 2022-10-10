@@ -6,35 +6,68 @@ function Form() {
 
   const form = useRef();
   const sendEmail = (e) => {
-      e.preventDefault();
-      emailjs
-          .sendForm(
-              'service_f6uat68',
-              'template_sdjraqf',
-              form.current,
-              'X5yYqiq0T_Uzamy6S')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-      e.target.reset()
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_f6uat68',
+        'template_sdjraqf',
+        form.current,
+        'X5yYqiq0T_Uzamy6S')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset()
   };
 
+  const [selected, setSelected] = React.useState("");
+
+  /** Function that will set different values to state variable
+  * based on which dropdown is selected
+  */
+  const changeSelectOptionHandler = (event) => {
+    setSelected(event.target.value);
+  };
+
+  /** Different arrays for different dropdowns */
+  const younger = ["9", "10", "11"];
+  const older = ["17", "18", "19"];
+
+  /** Type variable to store different array for different dropdown */
+  let type = null;
+
+  /** This will be used to create set of options that user will see */
+  let options = null;
+
+  /** Setting Type variable according to dropdown */
+  if (selected === "0-6") {
+    type = younger;
+  } else if (selected === "7-13") {
+    type = older;
+  }
+
+  /** If "Type" is null or undefined then options will be null,
+  * otherwise it will create a options iterable based on our array
+  */
+  if (type) {
+    options = type.map((el) => <option key={el}>{el}</option>);
+  }
+
   return (
-    <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg" ref={form} onSubmit={sendEmail}>
+    <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" ref={form} onSubmit={sendEmail}>
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Nombre
           </label>
-          <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Florencia" name='nombre' />
+          <input required className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Pepita" name='nombre' />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
             Apellido
           </label>
-          <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Lamanna" name='apellido' />
+          <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="La pistolera" name='apellido' />
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -42,7 +75,19 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             E-mail
           </label>
-          <input className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" name='email' />
+          <input className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="pepita@lapistolera.com" name='email' />
+        </div>
+      </div>
+      <div className="flex flex-wrap -mx-3 mb-6">
+        <div className="w-full px-3">
+          <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
+            Edad ñiña/niño
+          </label>
+          <select className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onChange={changeSelectOptionHandler}>
+            <option>Elegir edad</option>
+            <option>0-6</option>
+            <option>7-13</option>
+          </select>
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -57,9 +102,7 @@ function Form() {
             Horario
           </label>
           <select className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" name='horario'>
-            <option value="9hs">9:00</option>
-            <option value="9hs">9:30</option>
-            <option value="9hs">10:00</option>
+            {options}
           </select>
         </div>
       </div>
