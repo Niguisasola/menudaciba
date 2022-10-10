@@ -4,7 +4,7 @@ import Buttonpopup from "./Buttonpopup";
 
 function Header() {
     return (
-        <div className="flex justify-between h-56 grid grid-cols-2 gap-4 content-start items-center" >
+        <div className="flex justify-between h-auto grid grid-cols-2 gap-4 content-start items-center" >
 
             <Logo />
 
