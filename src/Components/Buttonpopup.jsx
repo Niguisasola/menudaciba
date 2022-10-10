@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import iconWhatsapp from '../Assets/Img/Icons/whatsapp.svg'
 
 
 class Buttonpopup extends React.Component {
@@ -22,23 +23,27 @@ class Buttonpopup extends React.Component {
             <>
                 <Button onClick={this.abrirModal} className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded">Contáctanos</Button>
                 <Modal isOpen={this.state.abierto} style={{ modalStyles }}>
-                    <ModalHeader className='d-flex'>
-                        <FormGroup className="justify-self-center">
-                            <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2 justify-center">Envíanos tu consulta</Label>
-                            <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2 justify-center">O contácatnos via Whatsapp</Label>
+                    <ModalHeader className='flex justify-center'>
+                        <FormGroup className="flex justify-center flex-col items-center">
+                            <Label className="block uppercase tracking-wide text-violeta-ciba text-sm font-bold mb-2 justify-center">Envíanos tu consulta O contáctanos via Whatsapp</Label>
+                            <a href='http://wa.link/85lcet'>
+                                <img className='w-12 justify-center mt-2' src={iconWhatsapp} alt="Whatsapp" />
+                            </a>
                         </FormGroup>
                     </ModalHeader>
                     <ModalBody className='cardbody -mx-3 mb-6'>
-                        <FormGroup className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <FormGroup className="w-full px-3 mb-6 md:mb-0">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Nombre</Label>
                             <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-name" type="text" placeholder="Pepita" name='user_name'></Input>
                         </FormGroup>
-                        <FormGroup className="w-full md:w-1/2 px-3">
+                        <FormGroup className="w-full px-3">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Teléfono de contacto</Label>
                             <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-phone" type="text" placeholder="03-03-456" name='phone' ></Input>
                         </FormGroup>
-                        <FormGroup className="w-full md:w-1/2 px-3">
-                            <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlhtmlFor="grid-email">Email</Label>
+
+                        <FormGroup className="w-full px-3">
+                            <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-email">Email</Label>
+
                             <Input className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="pepita.lapistolera@gmail.com" name='email'></Input>
                         </FormGroup>
                         <FormGroup className="w-full px-3">
