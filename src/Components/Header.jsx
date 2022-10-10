@@ -12,7 +12,7 @@ function Header() {
                 <Link to="/quienessomos">
                     <p className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded">Sobre Nosotr@s</p>
                 </Link>
-                <Link to="/Team">
+                <Link to="/equipo">
                     <p className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded">Equipo</p>
                 </Link>
                 <Link to="/Calendar">
