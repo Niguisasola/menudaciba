@@ -11,8 +11,8 @@ export default function Router (){
         <Routes>
             <Route path='/' element={<App/>}/>
             <Route path='/equipo' element={<Team/>}/>
-            <Route path='/quienessomos' element={<AboutUs/>}/>
-            <Route path='/reservarPorEdad' element={<ReserveByAge/>}/>
+            <Route path='/sobrenosotros' element={<AboutUs/>}/>
+            <Route path='/reservar' element={<ReserveByAge/>}/>
         </Routes>
         </BrowserRouter>
     )

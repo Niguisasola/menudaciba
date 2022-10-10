@@ -11,7 +11,8 @@ module.exports = {
         'lila-ciba': '#ae9eb9',
       },
       fontFamily: {
-        'koulen': ['Koulen']
+        'koulen': ['Koulen'],
+        'bebas': ['Bebas Neue']
       }
     },
   },
