@@ -4,7 +4,6 @@ import App from "../App";
 import AboutUs from "../Pages/AboutUs";
 import Reserve from "../Pages/Reserve";
 import Team from "../Pages/Team";
-import Iniciasesion from "../Pages/Iniciasesion";
 
 export default function Router (){
     return(
@@ -14,7 +13,6 @@ export default function Router (){
             <Route path='/equipo' element={<Team/>}/>
             <Route path='/sobrenosotros' element={<AboutUs/>}/>
             <Route path='/reservar' element={<Reserve/>}/>
-            <Route path='/login' element={<Iniciasesion />} />
         </Routes>
         </BrowserRouter>
     )
