@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../Components/Footer/Footer'
-import Header from '../Components/Header'
+import Header from '../Components/Header/Header'
 import ContainerTeam from '../Components/Team/ContainerTeam'
 
 function Team() {

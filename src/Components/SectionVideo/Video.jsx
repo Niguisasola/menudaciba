@@ -1,5 +1,5 @@
 import React from 'react'
-import videoCiba from '../../../Assets/Img/laciba.mp4'
+import videoCiba from '../../Assets/Img/laciba.mp4'
 import ButtonsBar from './ButtonsBar'
 
 function Video() {

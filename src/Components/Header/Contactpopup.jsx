@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 
-import iconWhatsapp from '../Assets/Img/Icons/whatsapp.svg'
+import iconWhatsapp from '../../Assets/Img/Icons/whatsapp.svg'
 
 
-class Buttonpopup extends React.Component {
+class Contactpopup extends React.Component {
     state = {
         abierto: false,
     }
@@ -62,4 +62,4 @@ class Buttonpopup extends React.Component {
 }
 
 
-export default Buttonpopup;
+export default Contactpopup;

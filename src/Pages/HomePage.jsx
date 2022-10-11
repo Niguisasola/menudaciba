@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../Components/Footer/Footer'
-import SectionVideo from '../Components/Home/SectionVideo/SectionVideo'
-import Header from '../Components/Header'
+import Header from '../Components/Header/Header';
+import SectionVideo from '../Components/SectionVideo/SectionVideo'
 import LoadingHome from '../Components/LoadingHome';
 
 

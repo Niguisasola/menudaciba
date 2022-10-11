@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Logo from '../Components/Logo';
-import Buttonpopup from "./Buttonpopup";
+import Logo from '../Logo';
+import Contactpopup from "./Contactpopup";
 
 function Header() {
     return (
@@ -18,7 +18,7 @@ function Header() {
                 <Link to="/reservar">
                     <p className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-bebas py-2 px-4 rounded">Reservas</p>
                 </Link>
-                <Buttonpopup />
+                <Contactpopup/>
             </div>
         </div>
     )
