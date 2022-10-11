@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../Components/Footer/Footer'
 import Form from '../Components/Form/Form'
-import Header from '../Components/Header'
+import Header from '../Components/Extras/Header'
 
 function Reserve() {
   return (

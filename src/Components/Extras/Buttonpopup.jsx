@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import iconWhatsapp from '../Assets/Img/Icons/whatsapp.svg'
+import iconWhatsapp from '../../Assets/Img/Icons/whatsapp.svg'
 
 
 class Buttonpopup extends React.Component {

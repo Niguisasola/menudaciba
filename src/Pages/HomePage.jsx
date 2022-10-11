@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../Components/Footer/Footer'
 import SectionVideo from '../Components/Home/SectionVideo/SectionVideo'
-import Header from '../Components/Header'
-import LoadingHome from '../Components/LoadingHome';
+import Header from '../Components/Extras/Header'
+import LoadingHome from '../Components/Home/LoadingHome';
 
 
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from '../Components/Logo';
+import Logo from '../../Components/Extras/Logo';
 import Buttonpopup from "./Buttonpopup";
 
 function Header() {

@@ -1,5 +1,5 @@
-import React from 'react'
-import LogoMenudaCiba from '../Assets/Img/menudaCiba.png'
+import React from 'react';
+import LogoMenudaCiba from '../../Assets/Img/menudaCiba.png';
 
 function Logo() {
   return (
