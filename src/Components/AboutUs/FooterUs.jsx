@@ -1,9 +1,23 @@
 function FooterUs(){
     return(
-        <div>
-           <div className="w-auto text-xl flex h-2/3 content-center">
-                 <p className="ml-10 mb-20 mr-10">En l’horari de matí s’adreçarà a infants de 0 a 6 anys i en l’horari de tarda el servi comptarà amb dos franges d’edat, el grup d’infants de 0 a 6 anys i el grup de 6 a 13 anys. El servei també contempla una prestació itinerant a diversos equipaments municipals, amb l’objectiu d’apropar el servei als barris de la ciutat, i així facilitar l’accés a les dones i les famílies destinatàries, així com poder oferir el servei de canguratge de manera puntual per a facilitar l’accés de les dones a recursos i serveis municipals, formacions o activitats de lleure i/o participació social de les dones.</p>
+        <div className="w-full">
+            <p className="pl-6 font-bebas text-violeta-ciba text-2xl">Horarios</p>
+            <div className="flex">
+            <div className="pr-4">
+            <p className="pl-6 font-roboto text-xl">0 a 6 años:</p>
+            <ul className="pl-6 font-roboto text-xl pb-4">
+                <li>Mañanas: 9 a 13h</li>
+                <li>Tardes: 16 a 19h</li>
+            </ul>
             </div>
+            <div>
+            <p className="pl-6 font-roboto text-xl">7 a 13 años:</p>
+            <ul className="pl-6 font-roboto text-xl">
+                <li>Tardes: 17 a 20h</li>
+            </ul>
+            </div>
+            </div>
+       
         </div>
     )
 }

@@ -7,12 +7,8 @@ function AboutUs(){
     return(
         <div>
             <Header/>
-                <div className="w-auto">
-                         <MainUS/>
-                    <div className="w-auto flex  pt-20">
-                         <FooterUs/>
-                     </div>
-                </div>
+            <MainUS/>
+            <FooterUs/>
             <Footer/>
         </div>
     )
