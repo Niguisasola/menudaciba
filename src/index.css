@@ -96,3 +96,10 @@ margin: 0 auto
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  input:invalid {
+    background-color: #f0f6cb;
+    border: none;
+    outline: 2px solid #C1D72F;
+    border-radius: 5px;
+}
