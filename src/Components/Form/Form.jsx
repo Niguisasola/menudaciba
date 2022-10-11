@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { useNavigate } from 'react-router-dom';
+import Confirmation from './Confirmation';
 
 function Form() {
 
@@ -43,12 +43,6 @@ function Form() {
 
   if (type) {
     options = type.map((el) => <option key={el}>{el}</option>);
-  }
-
-  const navigate = useNavigate();
-
-  const handleClick = () =>{
-    navigate("/")
   }
 
   return (
@@ -115,9 +109,9 @@ function Form() {
       
       <div className="md:flex md:items-center">
         <div className="md:w-1/3">
-          <button onClick={handleClick} className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-koulen py-2 px-4 rounded" type="submit">
+          <Confirmation>
             Reservar
-          </button>
+          </Confirmation>
         </div>
         <div className="md:w-2/3"></div>
       </div>
