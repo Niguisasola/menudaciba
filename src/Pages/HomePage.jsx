@@ -4,10 +4,6 @@ import Header from '../Components/Header/Header';
 import SectionVideo from '../Components/SectionVideo/SectionVideo'
 import LoadingHome from '../Components/LoadingHome';
 
-
-
-
-
 function HomePage() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {

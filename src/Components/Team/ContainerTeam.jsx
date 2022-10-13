@@ -1,4 +1,5 @@
 import React from 'react'
+import Newform from '../Form/Newform'
 import TeamMember from './TeamMember'
 
 function ContainerTeam() {
@@ -8,6 +9,7 @@ function ContainerTeam() {
         <TeamMember nombre="Pedro"/>
         <TeamMember nombre="Artemisia"/>
         <TeamMember nombre="Louis"/>
+        <Newform/>
     </div>
   )
 }
