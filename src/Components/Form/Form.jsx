@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Confirmation from './Confirmation';
+import axios from 'axios';
 
 function Form() {
+
+  // form states
+
+  const [nombre, setNombre] = useState('')
+  const [apellido, setApellido] = useState('')
+  const [email, setEmail] = useState('')
+  const [edad, setEdad] = useState('')
+  const [fecha, setFecha] = useState('')
+  const [horario, setHorario] = useState('')
+  const [comentarios, setComentarios] = useState('')
+
+//submit event
+
+const handleSubmit = (e) =>{
+  e.preventDefault();
+  const data={
+    Nombre: nombre,
+    Apellido: apellido,
+    Email: email,
+    Edad: edad,
+    Fecha: fecha,
+    Horario: horario,
+    Comentarios: comentarios
+  }
+  axios.post('https://app.sheetlabs.com/CCO/menudaciba', data).then((response)=>{
+    console.log(response)
+  })
+}
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -26,7 +55,8 @@ function Form() {
       }, (error) => {
         console.log(error.text);
       });
-    e.target.reset()
+    e.target.reset();
+    handleSubmit()
   };
 
   const [selected, setSelected] = React.useState("");
@@ -53,19 +83,19 @@ function Form() {
   }
 
   return (
-    <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" ref={form} onSubmit={sendEmail}>
+    <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" ref={form} onSubmit={sendEmail} action="https://app.sheetlabs.com/CCO/menudaciba" method='POST'>
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Nombre *
           </label>
-          <input required minlength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Pepita" name='nombre' />
+          <input required minlength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Pepita" name='nombre' onChange={(e)=>setNombre(e.target.value)} value={nombre}/>
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
             Apellido *
           </label>
-          <input required minlength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="La pistolera" name='apellido' />
+          <input required minlength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="La pistolera" name='apellido' onChange={(e)=>setApellido(e.target.value)} value={apellido} />
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -73,7 +103,7 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             E-mail *
           </label>
-          <input required className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="pepita@lapistolera.com" name='email' />
+          <input required className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="pepita@lapistolera.com" name='email' onChange={(e)=>setEmail(e.target.value)} value={email}/>
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -81,7 +111,7 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             Edad ñiña/niño *
           </label>
-          <select required className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onChange={changeSelectOptionHandler}>
+          <select required className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onChange={(e)=>setEdad(e.target.value)} name="edad" value={edad}>
             <option>Elegir edad</option>
             <option>0-6</option>
             <option>7-13</option>
@@ -93,13 +123,13 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Fecha *
           </label>
-          <input required className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="date" name='fecha' />
+          <input required className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="date" name='fecha' onChange={(e)=>setFecha(e.target.value)} value={fecha} />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
             Horario *
           </label>
-          <select required className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" name='horario'>
+          <select className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" name='horario' onChange={(e)=>setHorario(e.target.value)} value={horario}>
             {options}
           </select>
         </div>
@@ -109,7 +139,7 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             Información Complementaria
           </label>
-          <textarea className=" no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='info complementaria'></textarea>
+          <textarea className=" no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='comentarios' onChange={(e)=>setComentarios(e.target.value)} value={comentarios}></textarea>
           <p class="text-violeta-ciba text-sm italic">* = Campos obligatorios</p>
         </div>
       </div>
