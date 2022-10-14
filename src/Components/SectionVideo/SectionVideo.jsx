@@ -1,6 +1,7 @@
 import React from 'react'
-import ButtonsBar from './ButtonsBar'
+import BottomShape from './BottomShape'
 import ContainerButtons from './ContainerButtons'
+import TopShape from './TopShape'
 import Video from './Video'
 
 function SectionVideo() {
@@ -8,7 +9,8 @@ function SectionVideo() {
     <div className="w-full h-auto relative">
         <Video/>
         <ContainerButtons/>
-        <ButtonsBar/>
+        <BottomShape/>
+        <TopShape/>
     </div>
   )
 }
