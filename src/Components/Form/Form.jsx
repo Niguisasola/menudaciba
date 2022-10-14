@@ -20,7 +20,7 @@ function Form() {
 
 const handleSubmit = (e) =>{
   e.preventDefault();
-  const data={
+  const data= {
     Nombre: nombre,
     Apellido: apellido,
     Email: email,
@@ -29,9 +29,11 @@ const handleSubmit = (e) =>{
     Horario: horario,
     Comentarios: comentarios
   }
-  axios.post('https://app.sheetlabs.com/CCO/menudaciba', data).then((response)=>{
+  axios.post('https://sheet2api.com/v1/rycI7eBUTkaD/menudaciba', data).then((response)=>{
     console.log(response)
+  
   })
+  sendEmail(e)
 }
 
   const form = useRef();
@@ -56,7 +58,6 @@ const handleSubmit = (e) =>{
         console.log(error.text);
       });
     e.target.reset();
-    handleSubmit()
   };
 
   const [selected, setSelected] = React.useState("");
@@ -83,19 +84,19 @@ const handleSubmit = (e) =>{
   }
 
   return (
-    <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" ref={form} onSubmit={sendEmail} action="https://app.sheetlabs.com/CCO/menudaciba" method='POST'>
+    <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" ref={form} onSubmit={handleSubmit}>
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Nombre *
           </label>
-          <input required minlength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Pepita" name='nombre' onChange={(e)=>setNombre(e.target.value)} value={nombre}/>
+          <input required minLength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Pepita" name='nombre' onChange={(e)=>setNombre(e.target.value)} value={nombre}/>
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
             Apellido *
           </label>
-          <input required minlength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="La pistolera" name='apellido' onChange={(e)=>setApellido(e.target.value)} value={apellido} />
+          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="La pistolera" name='apellido' onChange={(e)=>setApellido(e.target.value)} value={apellido} />
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -140,7 +141,7 @@ const handleSubmit = (e) =>{
             Información Complementaria
           </label>
           <textarea className=" no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='comentarios' onChange={(e)=>setComentarios(e.target.value)} value={comentarios}></textarea>
-          <p class="text-violeta-ciba text-sm italic">* = Campos obligatorios</p>
+          <p className="text-violeta-ciba text-sm italic">* = Campos obligatorios</p>
         </div>
       </div>
       
