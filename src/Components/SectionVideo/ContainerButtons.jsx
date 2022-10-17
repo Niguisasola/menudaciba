@@ -3,7 +3,7 @@ import ButtonReserve from './ButtonReserve'
 
 function ContainerButtons() {
   return (
-    <div className='absolute inset-x-1/2 inset-y-1/2 -translate-x-1/2 -translate-y-1/2 flex w-full h-full bg-violeta-ciba opacity-50 justify-around pr-4 sm:pr-36 md:pr-40 lg:pr-32 pl-4 items-center rounded h-24'>
+    <div className='absolute inset-x-1/2 inset-y-1/2 -translate-x-1/2 -translate-y-1/2 flex w-full h-full justify-around pr-4 sm:pr-36 md:pr-40 lg:pr-32 pl-4 items-center rounded h-24'>
       <div className='w-1/2 opacity-100'>
         <p className='text-verde-ciba font-roboto text-sm md:text-md'>ESPAI INFANTIL CIBA</p>
         <br />
