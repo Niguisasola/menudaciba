@@ -1,4 +1,5 @@
 import { useState } from "react"; // import state
+import BurgerContact from "./BurgerContact";
 
 export default function BurgerMenu() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
@@ -42,6 +43,9 @@ export default function BurgerMenu() {
               </li>
               <li className="text-2xl border-b border-verde-ciba text-violeta-ciba my-8 uppercase">
                 <a href="/reservar">Reservar</a>
+              </li>
+              <li>
+                <BurgerContact/>
               </li>
             </ul>
           </div>
