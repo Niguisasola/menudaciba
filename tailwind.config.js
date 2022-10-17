@@ -13,7 +13,8 @@ module.exports = {
       fontFamily: {
         'koulen': ['Koulen'],
         'bebas': ['Bebas Neue'],
-        'roboto': ['Roboto Condensed']
+        'roboto': ['Roboto Condensed'],
+        'volkhov': ['Volkhov']
       }
     },
   },

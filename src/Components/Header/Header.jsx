@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import Logo from '../Logo';
+import BurgerMenu from "./BurgerMenu";
 import Contactpopup from "./Contactpopup";
 
 function Header() {
     return (
-        <div className="flex justify-between h-auto justify-center items-center lg:w-full w" >
+        <>
+        <div className="flex justify-between h-auto justify-between items-center lg:w-full w" >
             <Link to='/'>
             <Logo />
             </Link>
@@ -20,7 +22,10 @@ function Header() {
                 </Link>
                 <Contactpopup/>
             </div>
+            <BurgerMenu/>
         </div>
+       
+        </>
     )
 }
 export default Header;
