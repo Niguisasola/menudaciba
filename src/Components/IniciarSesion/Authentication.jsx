@@ -50,17 +50,18 @@ function Authentication() {
     return (
         <div className=" flex justify-center">
         <div className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" >
-            <div className="flex justify-content-center flex-wrap -mx-3 mb-6">
+            
            
-                <h3> Register User </h3>
-                <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                <h3 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2"> Register User </h3>
+               <div className="flex justify-content-center flex-wrap -mx-3 mb-6"> 
+               <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded-3 mt-2 mb-2 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     type="email"
                     placeholder="Email..."
                     onChange={(event) => {
                         setRegisterEmail(event.target.value);
                     }}
                 />
-                <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded mb-2 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     type="password"
                     placeholder="Password..."
                     onChange={(event) => {
@@ -68,19 +69,20 @@ function Authentication() {
                     }}
                 />
 
-                <button className='bg-verde-ciba p-3 rounded-xl font-bebas text-white' onClick={register}> Create User</button>
+                <button className='bg-violeta-ciba px-3 py-1 rounded-3 font-bebas text-white' onClick={register}> Create User</button>
             </div>
 
-            <div className='flex justify-content-center flex-wrap -mx-3 mb-6'>
-                <h3> Login </h3>
-                <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            
+                <h3 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mt-2 mb-2"> Login </h3>
+                <div className='flex justify-center flex-wrap -mx-3 mb-6'>
+                    <input className="appearance-none block w-full bg-violet-100 text-grey-600 border border-gray-200 rounded-3 mb-2 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     type="email"
                     placeholder="Email..."
                     onChange={(event) => {
                         setLoginEmail(event.target.value);
                     }}
                 />
-                <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                <input className="appearance-none block w-full bg-violet-100 text-grey-600 border border-gray-200 rounded-3 mb-2 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     type="password"
                     placeholder="Password..."
                     onChange={(event) => {
@@ -88,13 +90,15 @@ function Authentication() {
                     }}
                 />
 
-                <button className='bg-verde-ciba p-3 rounded-xl font-bebas text-white' onClick={login}> Login</button>
+                <button className='bg-violeta-ciba px-3 py-1 p-3 rounded-3 font-bebas text-white' onClick={login}> Login</button>
             </div>
+                    
+            <h4 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2"> User Logged In: </h4>
+            <div className='flex justify-content-center flex-wrap -mx-3 mb-6'>
+                <div className="appearance-none block w-full text-grey-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">{user?.email}</div>
 
-            <h4> User Logged In: </h4>
-            {user?.email}
-
-            <button className='bg-verde-ciba p-3 rounded-xl font-bebas text-white' onClick={logout}> Sign Out </button>
+            <button className='flex justify-content-center bg-violeta-ciba p-3 px-3 mt-2 py-1 rounded-3 font-bebas text-white' onClick={logout}> Sign Out </button>
+       </div>
         </div>
         </div>
     );
