@@ -11,7 +11,7 @@ module.exports = {
         'lila-ciba': '#ae9eb9',
       },
       fontFamily: {
-        'bebas': ['Bebas Neue'],
+        'alata': ['alata Neue'],
         'roboto': ['Roboto Condensed'],
         'volkhov': ['Volkhov'],
         'alata': ['Alata'],

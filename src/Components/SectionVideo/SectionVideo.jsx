@@ -7,10 +7,10 @@ import Video from './Video'
 function SectionVideo() {
   return (
     <div className="w-full h-auto relative overflow-hidden">
-        <Video/>
-        <ContainerButtons/>
-        <BottomShape/>
-        <TopShape/>
+      <Video />
+      <ContainerButtons />
+      <BottomShape />
+      <TopShape />
     </div>
   )
 }

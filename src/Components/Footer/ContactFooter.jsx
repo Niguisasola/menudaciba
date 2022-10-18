@@ -21,7 +21,7 @@ class ContactFooter extends React.Component {
 
         return (
             <>
-                <p onClick={this.abrirModal} className="text-violeta-ciba text-lg font-bebas hover:text-white">Contáctanos</p>
+                <p onClick={this.abrirModal} className="text-violeta-ciba text-lg font-alata hover:text-white">Contáctanos</p>
                 <Modal isOpen={this.state.abierto} style={{ modalStyles }}>
                     <ModalHeader className='flex justify-center'>
                         <FormGroup className="flex justify-center flex-col items-center">

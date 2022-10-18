@@ -6,7 +6,7 @@ function TeamMember(props) {
         <div className='w-48 h-48 rounded-full bg-violeta-ciba'>
             <img className="clip-mask" src="https://thispersondoesnotexist.com/image" alt="Team Member" />
         </div>
-        <p className='font-bebas text-violeta-ciba text-2xl'>{props.nombre}</p>
+        <p className='font-alata text-violeta-ciba text-2xl'>{props.nombre}</p>
     </div>
   )
 }

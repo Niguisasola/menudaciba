@@ -16,22 +16,22 @@ function HomePage() {
 
   return (
     <div>
-      {loading?
+      {loading ?
         <div className='loadingHome'>
-        <LoadingHome/>
+          <LoadingHome />
         </div>
         :
-      <>
-      <Header/>
-      <SectionVideo/>
-      <Main/>
-      <Footer/>
-      </>
+        <>
+          <Header />
+          <SectionVideo />
+          <Main />
+          <Footer />
+        </>
       }
-      
+
     </div>
 
-    
+
   )
 }
 

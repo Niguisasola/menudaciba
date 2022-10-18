@@ -8,7 +8,7 @@ function Team() {
     <>
       <Header />
       <div className='flex flex-col justify-center items-center'>
-        <h2 className='p-1 font-bebas text-violeta-ciba text-4xl'>Equipo</h2>
+        <h2 className='p-1 font-alata text-violeta-ciba text-4xl'>Equipo</h2>
         <p className='font-roboto text-center px-2'>Contamos con profesionales de gran experiencia y calidad humana</p>
       </div>
       <ContainerTeam />

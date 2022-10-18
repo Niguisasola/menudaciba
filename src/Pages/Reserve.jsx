@@ -7,11 +7,11 @@ import Header from '../Components/Header/Header'
 function Reserve() {
   return (
     <>
-    <Header/>
-    <div className='flex justify-center'>
-      <Form/>
-    </div>
-    <Footer/>
+      <Header />
+      <div className='flex justify-center'>
+        <Form />
+      </div>
+      <Footer />
     </>
 
   )

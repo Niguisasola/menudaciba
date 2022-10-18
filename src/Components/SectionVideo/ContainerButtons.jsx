@@ -11,7 +11,7 @@ function ContainerButtons() {
         <br />
         <p className='text-white font-roboto text-sm md:text-md'>Obert a totes les nenes i nens, entre els 0 i 13 anys.</p>
       </div>
-        <ButtonReserve/>
+      <ButtonReserve />
     </div>
   )
 }
