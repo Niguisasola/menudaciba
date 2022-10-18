@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Logo from '../Logo';
 import BurgerMenu from "./BurgerMenu";
 import Contactpopup from "./Contactpopup";
+import usuario from "../../Assets/Img/usuario.png"
+
 
 function Header() {
     return (
@@ -21,7 +23,10 @@ function Header() {
                 <Link to="/reservar">
                     <p className="shadow bg-verde-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-violeta-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-alata py-2 px-4 rounded">Reservas</p>
                 </Link>
-                
+                <Contactpopup/>
+                <Link to="/login">
+                <img className='w-10 mr-5' src={usuario}></img>
+                </Link> 
             </div>
             <BurgerMenu/>
         </div>
