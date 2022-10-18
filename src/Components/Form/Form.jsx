@@ -60,14 +60,17 @@ const handleSubmit = (e) =>{
     e.target.reset();
   };
 
-  const [selected, setSelected] = React.useState("");
+  const [selected, setSelected] = useState("");
 
-  const changeSelectOptionHandler = (event) => {
+  const changeSelectOptionHandler = (event, e) => {
     setSelected(event.target.value);
+    ElegirEdad(e)
   };
 
-  const younger = ["9", "10", "11"];
-  const older = ["17", "18", "19"];
+  const ElegirEdad = (e)=>setEdad(e.target.value);
+
+  const younger = ["9", "9.30", "10", "10.30", "11", "11.30", "12", "16", "16.30", "17", "17.30", "18"];
+  const older = ["17", "17.30", "18", "18.30", "19"];
 
   let type = null;
 
@@ -90,13 +93,13 @@ const handleSubmit = (e) =>{
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Nombre *
           </label>
-          <input required minLength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="Pepita" name='nombre' onChange={(e)=>setNombre(e.target.value)} value={nombre}/>
+          <input required minLength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-first-name" type="text" placeholder="Ingresa tu nombre" name='nombre' onChange={(e)=>setNombre(e.target.value)} value={nombre}/>
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
             Apellido *
           </label>
-          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="La pistolera" name='apellido' onChange={(e)=>setApellido(e.target.value)} value={apellido} />
+          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-last-name" type="text" placeholder="Ingresa tu apellido" name='apellido' onChange={(e)=>setApellido(e.target.value)} value={apellido} />
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -104,7 +107,7 @@ const handleSubmit = (e) =>{
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             E-mail *
           </label>
-          <input required className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="pepita@lapistolera.com" name='email' onChange={(e)=>setEmail(e.target.value)} value={email}/>
+          <input required className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="email" type="email" placeholder="Ingresa tu email" name='email' onChange={(e)=>setEmail(e.target.value)} value={email}/>
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -112,7 +115,7 @@ const handleSubmit = (e) =>{
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             Edad ñiña/niño *
           </label>
-          <select required className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onChange={(e)=>setEdad(e.target.value)} name="edad" value={edad}>
+          <select required className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" onChange={changeSelectOptionHandler} name="edad" value={edad}>
             <option>Elegir edad</option>
             <option>0-6</option>
             <option>7-13</option>
@@ -124,13 +127,13 @@ const handleSubmit = (e) =>{
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Fecha *
           </label>
-          <input required className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="date" name='fecha' onChange={(e)=>setFecha(e.target.value)} value={fecha} />
+          <input required className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-first-name" type="date" name='fecha' onChange={(e)=>setFecha(e.target.value)} value={fecha} />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
             Horario *
           </label>
-          <select className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" name='horario' onChange={(e)=>setHorario(e.target.value)} value={horario}>
+          <select className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-last-name" name='horario' onChange={(e)=>setHorario(e.target.value)} value={horario}>
             {options}
           </select>
         </div>
@@ -140,7 +143,7 @@ const handleSubmit = (e) =>{
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             Información Complementaria
           </label>
-          <textarea className=" no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='comentarios' onChange={(e)=>setComentarios(e.target.value)} value={comentarios}></textarea>
+          <textarea className=" no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 font-alata" id="message" name='comentarios' onChange={(e)=>setComentarios(e.target.value)} value={comentarios}></textarea>
           <p className="text-violeta-ciba text-sm italic">* = Campos obligatorios</p>
         </div>
       </div>
