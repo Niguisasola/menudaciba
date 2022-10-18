@@ -2,9 +2,9 @@ import cangurajeLaCiba from "../../Assets/Img/cangurajeLaCiba.jpg"
 function MainUS() {
     return (
         <>
-        <div className="flex justify-around items-center">
-            <img className="w-1/2 p-4" src={cangurajeLaCiba} alt="Espacio de Canguraje" />
-            <p className="w-1/2 p-4 font-roboto">
+        <div className="flex flex-col sm:flex-row justify-around items-center">
+            <img className="w-full sm:w-1/2 p-4" src={cangurajeLaCiba} alt="Espacio de Canguraje" />
+            <p className="w-full sm:w-1/2 p-4 font-roboto">
                 <span className="font-bebas text-violeta-ciba text-2xl">Menuda Ciba  </span>
                 es un espacio de cuidado y canguraje municipal, abierto a todas 
                 las niñas y niños, entre los 0 y 13 años. Tiene por objetivo que estos niños 

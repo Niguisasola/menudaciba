@@ -5,7 +5,7 @@ import Header from "../Components/Header/Header";
 
 function AboutUs(){
     return(
-        <div>
+        <div className="">
             <Header/>
             <MainUS/>
             <FooterUs/>

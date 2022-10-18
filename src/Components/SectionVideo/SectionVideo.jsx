@@ -6,7 +6,7 @@ import Video from './Video'
 
 function SectionVideo() {
   return (
-    <div className="w-full h-auto relative">
+    <div className="w-full h-auto relative overflow-hidden">
         <Video/>
         <ContainerButtons/>
         <BottomShape/>
