@@ -6,9 +6,9 @@ import Authentication from '../Components/IniciarSesion/Authentication'
 function LoginPage() {
   return (
     <>
-    <Header />
-        <Authentication />
-        <Footer />
+      <Header />
+      <Authentication />
+      <Footer />
     </>
   )
 }
