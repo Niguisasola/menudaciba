@@ -47,6 +47,9 @@ export default function BurgerMenu() {
             <li>
               <BurgerContact />
             </li>
+            <li className="text-2xl border-b border-verde-ciba text-violeta-ciba my-8 uppercase">
+              <a href="/login">Log In/Sign In</a>
+            </li>
           </ul>
         </div>
       </section>

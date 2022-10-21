@@ -1,5 +1,5 @@
 import React from 'react'
-import formaInferior from '../../Assets/Img/formaInferior.png'
+import formaInferior from '../../assets/img/formaInferior.png'
 
 function BottomShape() {
   return (

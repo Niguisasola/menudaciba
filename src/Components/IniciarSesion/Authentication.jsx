@@ -48,11 +48,11 @@ function Authentication() {
     };
 
     return (
-        <div className=" flex justify-center">
+        <div className=" flex justify-center m-4">
             <div className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" >
 
 
-                <h3 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Crea tu usuario</h3>
+                <h3 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Crea el teu usuari</h3>
                 <div className="flex justify-content-center flex-wrap -mx-3 mb-6">
                     <input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded-3 mt-2 mb-2 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         type="email"
@@ -69,11 +69,11 @@ function Authentication() {
                         }}
                     />
 
-                    <button className='bg-violeta-ciba px-3 py-1 rounded-3 font-alata text-white' onClick={register}>Regístrate</button>
+                    <button className='bg-violeta-ciba px-3 py-1 rounded-3 font-alata text-white' onClick={register}>Registra't</button>
                 </div>
 
 
-                <h3 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mt-2 mb-2">Inicia Sesión</h3>
+                <h3 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mt-2 mb-2">Inicia Sessió</h3>
                 <div className='flex justify-center flex-wrap -mx-3 mb-6'>
                     <input className="appearance-none block w-full bg-violet-100 text-grey-600 border border-gray-200 rounded-3 mb-2 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         type="email"
@@ -90,14 +90,14 @@ function Authentication() {
                         }}
                     />
 
-                    <button className='bg-violeta-ciba px-3 py-1 p-3 rounded-3 font-alata text-white' onClick={login}>Iniciar Sesión</button>
+                    <button className='bg-violeta-ciba px-3 py-1 p-3 rounded-3 font-alata text-white' onClick={login}>Iniciar Sessió</button>
                 </div>
 
-                <h4 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Usuario loggueado:</h4>
+                <h4 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Usuari loguejat:</h4>
                 <div className='flex justify-content-center flex-wrap -mx-3 mb-6'>
                     <div className="appearance-none block w-full text-grey-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">{user?.email}</div>
 
-                    <button className='flex justify-content-center bg-violeta-ciba p-3 px-3 mt-2 py-1 rounded-3 font-alata text-white' onClick={logout}>Cerrar Sesión</button>
+                    <button className='flex justify-content-center bg-violeta-ciba p-3 px-3 mt-2 py-1 rounded-3 font-alata text-white' onClick={logout}>Tancar Sessió</button>
                 </div>
             </div>
         </div>

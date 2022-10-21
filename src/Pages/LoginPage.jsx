@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '../Components/Footer/Footer'
-import Header from '../Components/Header/Header'
-import Authentication from '../Components/IniciarSesion/Authentication'
+import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header'
+import Authentication from '../components/IniciarSesion/Authentication'
 
 function LoginPage() {
   return (

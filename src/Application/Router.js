@@ -1,10 +1,10 @@
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import App from "../App";
-import AboutUs from "../Pages/AboutUs";
-import LoginPage from "../Pages/LoginPage";
-import Reserve from "../Pages/Reserve";
-import Team from "../Pages/Team";
+import AboutUs from "../pages/AboutUs";
+import LoginPage from "../pages/LoginPage";
+import Reserve from "../pages/Reserve";
+import Team from "../pages/Team";
 
 export default function Router (){
     return(

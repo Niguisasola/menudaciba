@@ -30,12 +30,12 @@ class Confirmation extends React.Component {
                     </ModalHeader>
                     <ModalBody className='cardbody -mx-3 mb-6'>
                         <FormGroup className="w-full px-3 mb-6 md:mb-0">
-                            <p className="block tracking-wide text-violeta-ciba text-base mb-2">Gracias por contactarnos. Recibirás una confirmación al mail que nos has proporcionado!</p>
+                            <p className="block tracking-wide text-violeta-ciba text-base mb-2">Gràcies per contactar-nos. Rebràs una confirmació al mail que ens has proporcionat!</p>
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter className='className="col-sm-6'>
                         <Link to='/'>
-                            <Button className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-alata py-2 px-4 rounded" type="button">Volver a la página principal</Button>
+                            <Button className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-alata py-2 px-4 rounded" type="button">Tornar a la pàgina principal</Button>
                         </Link>
                     </ModalFooter>
                 </Modal>

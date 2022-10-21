@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import iconWhatsapp from '../../Assets/Img/Icons/whatsapp.svg'
+import iconWhatsapp from '../../assets/img/icons/whatsapp.svg'
 
 
 class ContactFooter extends React.Component {
@@ -21,7 +21,7 @@ class ContactFooter extends React.Component {
 
         return (
             <>
-                <p onClick={this.abrirModal} className="text-violeta-ciba text-lg font-alata hover:text-white">Contáctanos</p>
+                <p onClick={this.abrirModal} className="text-violeta-ciba text-lg font-alata hover:text-white">Contacta'ns</p>
                 <Modal isOpen={this.state.abierto} style={{ modalStyles }}>
                     <ModalHeader className='flex justify-center'>
                         <FormGroup className="flex justify-center flex-col items-center">
