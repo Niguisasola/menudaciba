@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Confirmation from './Confirmation';
 import axios from 'axios';
+import Confirmation from './Confirmation'
+import { addDoc, collection } from 'firebase/firestore' 
+import { db } from '../IniciarSesion/firebase-config';
 
 function Form() {
 
@@ -62,9 +64,9 @@ function Form() {
 
   const [selected, setSelected] = useState("");
 
-  const changeSelectOptionHandler = (event, e) => {
+  const changeSelectOptionHandler = (event) => {
     setSelected(event.target.value);
-    ElegirEdad(e)
+    ElegirEdad(event)
   };
 
   const ElegirEdad = (e) => setEdad(e.target.value);
@@ -86,6 +88,22 @@ function Form() {
     options = type.map((el) => <option key={el}>{el}</option>);
   }
 
+
+  //Firebase DB
+
+  const handleFireBase = (e)=>{
+    e.preventDefault()
+    if (nombre === ""){
+      return
+    }
+    const reservasCollRef = collection(db, "reservas")
+    addDoc(reservasCollRef, {nombre}).then(response =>{
+      console.log(response)
+    }).catch(error =>{
+      console.log(error.message)
+    })
+  }
+
   return (
     <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg m-4" ref={form} onSubmit={handleSubmit}>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -93,7 +111,7 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Nombre *
           </label>
-          <input required minLength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-first-name" type="text" placeholder="Ingresa tu nombre" name='nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
+          <input required minLength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="nombre" type="text" placeholder="Ingresa tu nombre" name='nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">

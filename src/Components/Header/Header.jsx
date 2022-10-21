@@ -23,7 +23,7 @@ function Header() {
                         <p className="shadow bg-verde-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-violeta-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-alata py-2 px-4 rounded">Reservas</p>
                     </Link>
                     <Link to="/login">
-                        <img className='w-10 mx-4' src={usuario}></img>
+                        <img className='w-10 mx-4' src={usuario} alt="Log in y Registro de usuario" ></img>
                     </Link>
                 </div>
                 <BurgerMenu />
