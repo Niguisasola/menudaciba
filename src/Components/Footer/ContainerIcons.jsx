@@ -1,7 +1,7 @@
 import React from 'react'
-import iconFacebook from '../../Assets/Img/Icons/facebook.svg'
-import iconInstagram from '../../Assets/Img/Icons/instagram.svg'
-import iconTwitter from '../../Assets/Img/Icons/twitter.svg'
+import iconFacebook from '../../assets/img/icons/facebook.svg'
+import iconInstagram from '../../assets/img/icons/instagram.svg'
+import iconTwitter from '../../assets/img/icons/twitter.svg'
 
 function ContainerIcons() {
   return (

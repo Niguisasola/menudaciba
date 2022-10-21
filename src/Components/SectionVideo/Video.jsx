@@ -1,6 +1,6 @@
 import React from 'react'
-import videoCiba from '../../Assets/Img/laciba.mp4'
-import videoCibaMovil from '../../Assets/Img/lacibaMovil.mp4'
+import videoCiba from '../../assets/img/laciba.mp4'
+import videoCibaMovil from '../../assets/img/lacibaMovil.mp4'
 
 function Video() {
   return (

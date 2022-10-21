@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Footer from '../Components/Footer/Footer'
-import Header from '../Components/Header/Header';
-import SectionVideo from '../Components/SectionVideo/SectionVideo'
-import LoadingHome from '../Components/LoadingHome';
-import Main from '../Components/Main/Main';
+import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header';
+import SectionVideo from '../components/SectionVideo/SectionVideo'
+import LoadingHome from '../components/LoadingHome';
+import Main from '../components/Main/Main';
 
 function HomePage() {
   const [loading, setLoading] = useState(false);

@@ -1,15 +1,15 @@
 import React from 'react'
-import iconFree from '../../Assets/Img/Icons/gratis.png'
-import iconPriority from '../../Assets/Img/Icons/prioridad.png'
-import iconObjetivo from '../../Assets/Img/Icons/objetivo.png'
-import imgNenes from '../../Assets/Img/nenes-ciba.jpeg'
+import iconFree from '../../assets/img/icons/gratis.png'
+import iconPriority from '../../assets/img/icons/prioridad.png'
+import iconObjetivo from '../../assets/img/icons/objetivo.png'
+import imgNenes from '../../assets/img/nenes-ciba.jpeg'
 
 function Main() {
     return (
         <div className='flex justify-around'>
             <div className='flex flex-col md:w-11/12 lg:w-8/12 md:flex-row justify-around items-center'>
                 <div className='flex flex-col m-4 w-9/12 sm:w-1/2 sm:mx-12'>
-                    <p className='font-roboto'>Reserva fácilmente</p>
+                    <p className='font-roboto'>Reserveu fàcilment</p>
                     <p className='font-volkhov text-grey-600 text-4xl'>Menuda Ciba</p>
                     <div className='flex w-full font-roboto justify-start items-center h-24'>
                         <img className='w-12 my-2 mr-2' src={iconFree} alt='Gratis' />

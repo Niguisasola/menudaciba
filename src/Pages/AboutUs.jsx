@@ -1,7 +1,7 @@
-import MainUS from "../Components/AboutUs/MainUs";
-import FooterUs from "../Components/AboutUs/FooterUs";
-import Footer from "../Components/Footer/Footer";
-import Header from "../Components/Header/Header";
+import MainUS from "../components/AboutUs/MainUs";
+import FooterUs from "../components/AboutUs/FooterUs";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 function AboutUs() {
     return (

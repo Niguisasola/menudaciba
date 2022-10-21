@@ -36,6 +36,7 @@ function Form() {
 
     })
     sendEmail(e)
+    handleFireBase(e)
   }
 
   const form = useRef();
@@ -109,13 +110,13 @@ function Form() {
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
-            Nombre *
+            Nom *
           </label>
           <input required minLength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="nombre" type="text" placeholder="Ingresa tu nombre" name='nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
-            Apellido *
+            Cognom *
           </label>
           <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-last-name" type="text" placeholder="Ingresa tu apellido" name='apellido' onChange={(e) => setApellido(e.target.value)} value={apellido} />
         </div>
@@ -131,10 +132,10 @@ function Form() {
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
-            Edad ñiña/niño *
+            Edat nena/nen *
           </label>
           <select required className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" onChange={changeSelectOptionHandler} name="edad" value={edad}>
-            <option>Elegir edad</option>
+            <option>Triar edat</option>
             <option>0-6</option>
             <option>7-13</option>
           </select>
@@ -143,13 +144,13 @@ function Form() {
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
-            Fecha *
+            Data *
           </label>
           <input required className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-first-name" type="date" name='fecha' onChange={(e) => setFecha(e.target.value)} value={fecha} />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
-            Horario *
+            Horari *
           </label>
           <select className=" block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-last-name" name='horario' onChange={(e) => setHorario(e.target.value)} value={horario}>
             {options}
@@ -159,10 +160,19 @@ function Form() {
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
-            Información Complementaria
+          Informació Complementària
           </label>
           <textarea className=" no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 font-alata" id="message" name='comentarios' onChange={(e) => setComentarios(e.target.value)} value={comentarios}></textarea>
-          <p className="text-violeta-ciba text-sm italic">* = Campos obligatorios</p>
+          <p className="text-violeta-ciba text-sm italic">* = Camps obligatoris</p>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap -mx-3 mb-6">
+        <div className="w-full px-3 flex items-center">
+          <input className="mr-2" required type='checkbox'/>
+          <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-alata" htmlFor="grid-password">
+            He llegit i accepto la <a href='https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673'><span className='underline'>política de protecció de dades</span></a>
+          </label>
         </div>
       </div>
 

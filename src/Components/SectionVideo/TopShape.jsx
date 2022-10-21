@@ -1,5 +1,5 @@
 import React from 'react'
-import formaSuperior from '../../Assets/Img/formaSuperior.png'
+import formaSuperior from '../../assets/img/formaSuperior.png'
 
 function TopShape() {
   return (

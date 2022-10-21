@@ -1,6 +1,6 @@
 import React from 'react'
-import LogoMenudaCiba from '../Assets/Img/menudaCiba.png'
-import cibaTexto from '../Assets/Img/cibaTexto.png'
+import LogoMenudaCiba from '../assets/img/menudaCiba.png'
+import cibaTexto from '../assets/img/cibaTexto.png'
 
 function Logo() {
   return (

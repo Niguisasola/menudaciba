@@ -5,9 +5,9 @@ import ContactFooter from './ContactFooter'
 function LinksFooter() {
   return (
     <div className='hidden w-6/12 sm:flex text-center sm:flex-row justify-around text-violeta-ciba p-4 text-lg font-alata'>
-      <Link to='/sobrenosotros' className='hover:text-white'><p>Sobre Nosotr@s</p></Link>
-      <Link to='/equipo' className='hover:text-white'><p>Equipo</p></Link>
-      <Link to='/reservar' className='hover:text-white'><p>Reservas</p></Link>
+      <Link to='/sobrenosotros' className='hover:text-white'><p>Sobre Nosaltres</p></Link>
+      <Link to='/equipo' className='hover:text-white'><p>Equip</p></Link>
+      <Link to='/reservar' className='hover:text-white'><p>Reserves</p></Link>
       <ContactFooter />
     </div>
   )

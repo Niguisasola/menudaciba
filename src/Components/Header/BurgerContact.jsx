@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 
-import iconWhatsapp from '../../Assets/Img/Icons/whatsapp.svg'
+import iconWhatsapp from '../../assets/img/icons/whatsapp.svg'
 
 
 class BurgerContact extends React.Component {
