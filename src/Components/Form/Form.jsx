@@ -171,16 +171,23 @@ function Form() {
         <div className="w-full px-3 flex items-center">
           <input className="mr-2" required type='checkbox'/>
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-alata" htmlFor="grid-password">
-            He llegit i accepto la <a href='https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673'><span className='underline'>política de protecció de dades</span></a>
+            He llegit i accepto la <a href='https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673'><span className='underline'>política de protecció de dades</span> *</a>
           </label>
         </div>
       </div>
 
       <div className="md:flex md:items-center">
         <div className="md:w-1/3">
+          { !nombre && !apellido?
+          <button disabled className="shadow bg-gray-500 text-gray-300 font-alata py-2 px-4 rounded">
+            Reservar
+          </button> 
+          :
           <Confirmation>
             Reservar
           </Confirmation>
+          }
+          
         </div>
         <div className="md:w-2/3"></div>
       </div>
@@ -189,6 +196,3 @@ function Form() {
 }
 
 export default Form
-
-//<input type="hidden" name='_next' value="/reservarPorEdad"/>
-//<input type="hidden" name='_captcha' value="false"/>

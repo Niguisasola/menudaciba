@@ -41,25 +41,25 @@ function ListReservations() {
                                     <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                                         <tr>
                                             <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Nombre</div>
+                                                <div class="font-semibold text-left">Nom</div>
                                             </th>
                                             <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Apellido</div>
+                                                <div class="font-semibold text-left">Cognom</div>
                                             </th>
                                             <th class="p-2 whitespace-nowrap">
                                                 <div class="font-semibold text-left">Email</div>
                                             </th>
                                             <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-center">Edad niña/niño</div>
+                                                <div class="font-semibold text-left">Edat nena/nen</div>
                                             </th>
                                             <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-center">Fecha</div>
+                                                <div class="font-semibold text-left">Data</div>
                                             </th>
                                             <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-center">Horario</div>
+                                                <div class="font-semibold text-left">Horari</div>
                                             </th>
                                             <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-center">Comentarios</div>
+                                                <div class="font-semibold text-left">Informació Complementària</div>
                                             </th>
                                         </tr>
                                     </thead>
@@ -79,7 +79,7 @@ function ListReservations() {
                                                     <div class="text-left font-medium text-violeta-ciba">{reserva.data.email}</div>
                                                 </td>
                                                 <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-lg text-center">{reserva.data.edad}</div>
+                                                    <div class="text-lg text-left">{reserva.data.edad}</div>
                                                 </td>
                                                 <td class="p-2 whitespace-nowrap">
                                                     <div class="text-left">{reserva.data.fecha}</div>
