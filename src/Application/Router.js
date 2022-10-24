@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import App from "../App";
 import AboutUs from "../pages/AboutUs";
+import ListOfReservations from "../pages/ListOfReservations";
 import LoginPage from "../pages/LoginPage";
 import Reserve from "../pages/Reserve";
 import Team from "../pages/Team";
@@ -15,6 +16,7 @@ export default function Router (){
             <Route path='/sobrenosotros' element={<AboutUs/>}/>
             <Route path='/reservar' element={<Reserve/>}/>
             <Route path='/login' element={<LoginPage/>}/>
+            <Route path='/listadereservas' element={<ListOfReservations/>}/>
         </Routes>
         </BrowserRouter>
     )

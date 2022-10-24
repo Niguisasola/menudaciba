@@ -98,7 +98,7 @@ function Form() {
       return
     }
     const reservasCollRef = collection(db, "reservas")
-    addDoc(reservasCollRef, {nombre}).then(response =>{
+    addDoc(reservasCollRef, {nombre, apellido, email, edad, fecha, horario, comentarios}).then(response =>{
       console.log(response)
     }).catch(error =>{
       console.log(error.message)
