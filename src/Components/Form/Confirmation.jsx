@@ -23,10 +23,6 @@ class Confirmation extends React.Component {
             top: "50%",
             left: "50%",
         }
-        console.log (this.props.deshabilitado)
-        console.log (this.isValid())
-
-
 
         return (
             <>

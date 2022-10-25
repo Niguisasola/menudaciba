@@ -3,12 +3,12 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import axios from 'axios';
 import Confirmation from './Confirmation'
-import { addDoc, collection } from 'firebase/firestore' 
+import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../IniciarSesion/firebase-config';
 
 function Form() {
 
-  // form states
+  // Form states
 
   const [nombre, setNombre] = useState('')
   const [apellido, setApellido] = useState('')
@@ -17,8 +17,9 @@ function Form() {
   const [fecha, setFecha] = useState('')
   const [horario, setHorario] = useState('')
   const [comentarios, setComentarios] = useState('')
+  const [politicas, setPoliticas] = useState(false)
 
-  //submit event
+  //Submit event
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +30,8 @@ function Form() {
       Edad: edad,
       Fecha: fecha,
       Horario: horario,
-      Comentarios: comentarios
+      Comentarios: comentarios,
+      Politicas: politicas
     }
     axios.post('https://sheet2api.com/v1/rycI7eBUTkaD/menudaciba', data).then((response) => {
       console.log(response)
@@ -38,6 +40,8 @@ function Form() {
     sendEmail(e)
     handleFireBase(e)
   }
+
+  // Send email
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -62,6 +66,8 @@ function Form() {
       });
     e.target.reset();
   };
+
+  //Opciones de horarios segun edad
 
   const [selected, setSelected] = useState("");
 
@@ -92,21 +98,30 @@ function Form() {
 
   //Firebase DB
 
-  const handleFireBase = (e)=>{
+  const handleFireBase = (e) => {
     e.preventDefault()
-  
+
     const reservasCollRef = collection(db, "reservas")
-    addDoc(reservasCollRef, {nombre, apellido, email, edad, fecha, horario, comentarios}).then(response =>{
+    addDoc(reservasCollRef, { nombre, apellido, email, edad, fecha, horario, comentarios }).then(response => {
       console.log(response)
-    }).catch(error =>{
+    }).catch(error => {
       console.log(error.message)
     })
   }
 
-  const isFormValid = ()=>{
-    return nombre && apellido && email && fecha && edad && horario
-    }
 
+  //Validacion del formulario
+
+  const isFormValid = () => {
+    return nombre && apellido && email && fecha && edad && horario && politicas
+  }
+
+
+  const handleChange = () => {
+
+    setPoliticas(!politicas);
+
+  };
 
   return (
     <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg m-4" ref={form} onSubmit={handleSubmit}>
@@ -163,7 +178,7 @@ function Form() {
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
-          Informació Complementària
+            Informació Complementària
           </label>
           <textarea className=" no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 font-alata" id="message" name='comentarios' onChange={(e) => setComentarios(e.target.value)} value={comentarios}></textarea>
           <p className="text-violeta-ciba text-sm italic">* = Camps obligatoris</p>
@@ -172,7 +187,7 @@ function Form() {
 
       <div className="flex flex-wrap -mx-3 mb-6">
         <div className="w-full px-3 flex items-center">
-          <input className="mr-2" required type='checkbox'/>
+          <input className="mr-2" required type='checkbox' onChange={handleChange} value={politicas} />
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-alata" htmlFor="grid-password">
             He llegit i accepto la <a href='https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673'><span className='underline'>política de protecció de dades</span> *</a>
           </label>
@@ -181,12 +196,12 @@ function Form() {
 
       <div className="md:flex md:items-center">
         <div className="md:w-1/3">
-      
+
           <Confirmation deshabilitado={isFormValid()} >
             Reservar
           </Confirmation>
-  
-          
+
+
         </div>
         <div className="md:w-2/3"></div>
       </div>
