@@ -5,11 +5,16 @@ import { Link } from 'react-router-dom';
 
 
 class Confirmation extends React.Component {
+   
     state = {
         abierto: false,
     }
     abrirModal = () => {
         this.setState({ abierto: !this.state.abierto })
+    }
+
+    isValid = () => {
+      return  this.props.deshabilitado? false : true
     }
 
     render() {
@@ -18,10 +23,14 @@ class Confirmation extends React.Component {
             top: "50%",
             left: "50%",
         }
+        console.log (this.props.deshabilitado)
+        console.log (this.isValid())
+
+
 
         return (
             <>
-                <Button onClick={this.abrirModal} type="submit" className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-alata py-2 px-4 rounded">Reservar</Button>
+                <Button disabled={this.isValid()} onClick={this.abrirModal} type="submit" className="shadow bg-violeta-ciba transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-verde-ciba duration-300 focus:shadow-outline focus:outline-none text-white font-alata py-2 px-4 rounded">Reservar</Button>
                 <Modal isOpen={this.state.abierto} style={{ modalStyles }}>
                     <ModalHeader className='flex justify-center'>
                         <FormGroup className="flex justify-center flex-col items-center">

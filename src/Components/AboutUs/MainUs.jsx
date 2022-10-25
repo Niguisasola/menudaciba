@@ -3,7 +3,7 @@ function MainUS() {
     return (
         <>
             <div className="flex flex-col sm:flex-row justify-around items-center">
-                <img className="w-full sm:w-1/2 p-4" src={cangurajeLaCiba} alt="Espacio de Canguraje" />
+                <img className="w-full sm:w-1/2 p-4 rounded-lg" src={cangurajeLaCiba} alt="Espacio de Canguraje" />
                 <p className="w-full sm:w-1/2 p-4 font-roboto">
                     <span className="font-alata text-violeta-ciba text-2xl">Menuda Ciba  </span>
                     és un tra, obert a totes les nenes i nens, entre els 0 i 13 anys. 

@@ -94,9 +94,7 @@ function Form() {
 
   const handleFireBase = (e)=>{
     e.preventDefault()
-    if (nombre === ""){
-      return
-    }
+  
     const reservasCollRef = collection(db, "reservas")
     addDoc(reservasCollRef, {nombre, apellido, email, edad, fecha, horario, comentarios}).then(response =>{
       console.log(response)
@@ -105,6 +103,11 @@ function Form() {
     })
   }
 
+  const isFormValid = ()=>{
+    return nombre && apellido && email && fecha && edad && horario
+    }
+
+
   return (
     <form className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg m-4" ref={form} onSubmit={handleSubmit}>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -112,7 +115,7 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Nom *
           </label>
-          <input required minLength="3" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="nombre" type="text" placeholder="Ingresa tu nombre" name='nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
+          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="nombre" type="text" placeholder="Ingresa tu nombre" name='nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
@@ -178,15 +181,11 @@ function Form() {
 
       <div className="md:flex md:items-center">
         <div className="md:w-1/3">
-          { !nombre && !apellido?
-          <button disabled className="shadow bg-gray-500 text-gray-300 font-alata py-2 px-4 rounded">
-            Reservar
-          </button> 
-          :
-          <Confirmation>
+      
+          <Confirmation deshabilitado={isFormValid()} >
             Reservar
           </Confirmation>
-          }
+  
           
         </div>
         <div className="md:w-2/3"></div>
