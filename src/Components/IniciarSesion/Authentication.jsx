@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut
+}
+    from 'firebase/auth';
 import { auth } from './firebase-config.js';
 
 function Authentication() {
+    const [userEmail,setUserEmail] = useState("")
     const [registerEmail, setRegisterEmail] = useState("");
     const [registerPassword, setRegisterPassword] = useState("");
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
 
-    const [user, setUser] = useState({});
+    useEffect(()=> {
+        setUserEmailFromLocalStorage()
+    }, [])
 
-    useEffect(() => {
-        onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-        });
-    })
-
+    const setUserEmailFromLocalStorage =() =>
+        setUserEmail(localStorage.getItem("client_email"));
 
     const register = async () => {
         try {
@@ -37,6 +41,7 @@ function Authentication() {
                 loginEmail,
                 loginPassword
             );
+            setUserEmailFromLocalStorage();
             console.log(user);
         } catch (error) {
             console.log(error.message);
@@ -45,6 +50,7 @@ function Authentication() {
 
     const logout = async () => {
         await signOut(auth);
+        setUserEmailFromLocalStorage();
     };
 
     return (
@@ -95,7 +101,7 @@ function Authentication() {
 
                 <h4 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Usuari loguejat:</h4>
                 <div className='flex justify-content-center flex-wrap -mx-3 mb-6'>
-                    <div className="appearance-none block w-full text-grey-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">{user?.email}</div>
+                    <div className="appearance-none block w-full text-grey-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">{userEmail}</div>
 
                     <button className='flex justify-content-center bg-violeta-ciba p-3 px-3 mt-2 py-1 rounded-3 font-alata text-white' onClick={logout}>Tancar Sessió</button>
                 </div>
