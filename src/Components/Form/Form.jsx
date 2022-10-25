@@ -52,13 +52,6 @@ function Form() {
         'template_sdjraqf',
         form.current,
         'X5yYqiq0T_Uzamy6S')
-    emailjs
-      .sendForm(
-        'service_f6uat68',
-        'template_hz31ro6',
-        form.current,
-        'X5yYqiq0T_Uzamy6S'
-      )
       .then((result) => {
         console.log(result.text);
       }, (error) => {
