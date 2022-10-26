@@ -1,9 +1,11 @@
 <div align="center">
 
-  <img src="./src/assets/img/menudaCiba.png" alt="logo" width="350" height="auto" />
+  <img src="./src/assets/img/menudaCiba.png" alt="logo" width="300" height="auto" />
   
   
  https://menudaciba.netlify.app/
+ <br>
+ https://menuda-ciba.vercel.app/
   
   
   </div>
@@ -14,23 +16,26 @@
 # 💻 Table of Contents
 
 - [About the Project](#about-the-project-⭐)
-  * [Screenshots](#📷-Screenshots)
-  * [Tech Stack](#space_invader-tech-stack)
-  * [Features](#dart-features)
-  * [Color Reference](#art-color-reference)
-- [Getting Started](#toolbox-getting-started)
-  * [Installation](#gear-installation)
-  * [Run Locally](#running-run-locally)
-- [Author](#wave-contributing)
-- [Contact](#contact)
+  * [Screenshots](#screenshots-📷)
+  * [Tech Stack](#tech-stack-👾)
+  * [Features](#features-🎯)
+  * [Color Reference](#color-reference-🎨)
+- [Getting Started](#getting-started-🧰)
+  * [Run Locally](#run-locally-🏃‍♀️)
+- [Authors](#authors-🙋‍♀️​)
+- [Contributing](#contributing-👋 )
+- [Contact](#contact-🤝)
 
   
 
 <!-- About the Project -->
 ## About the Project ⭐ 
-La idea del proyecto surge de mi hobby por el tejido en crochet, me pareció interesante poder crear un e-commerce para su comercialización.
+Menuda Ciba es una web de canguraje, para [La Ciba](https://laciba.gramenet.cat/es/) (centro de recursos para mujeres), ubicado en Santa Coloma de Gramenet, Barcelona.
+Particularmente pensado para familias monomarentales en situación de violencia, proceso de formación ,inserción laboral o necesidad de tiempo personal.
+La finalidad de este proyecto es facilitar la reserva de citas para el canguraje de manera fácil y rápida.
 
-Presentación del proyecto -> https://www.canva.com/design/DAFGFqrxfrE/azfFyrenlhYPa4K-WbagFg/view?utm_content=DAFGFqrxfrE&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent
+**Proyecto en proceso de desarrollo.*
+
 
 <!-- Screenshots -->
 ### Screenshots 📷 
@@ -45,25 +50,30 @@ Presentación del proyecto -> https://www.canva.com/design/DAFGFqrxfrE/azfFyrenl
 <!-- TechStack -->
 ### Tech Stack 👾 
 
+- HTML
+- Tailwind
 - ReactJs (18.2.0)
-- CSS 
+- Firebase (Authentication and Database)
+- EmailJS
+- CallBell 
 
 <!-- Features -->
 ### Features  🎯
 
-- Consumo de datos desde una API, utilizando Sheetsu
-- Barra de Búsqueda live
-- Opción de favoritos
-- Suma de productos al carrito
-- Vaciado total del carrito
-- Contacto via Whatsapp
 - Diseño responsive
+- Contacto via Whatsapp
+- Registro de reservas en base de datos
+- Autenticación para el administrador
+- Lista de reservas con vista protegida sólo para el administrador
+- Envío de email de confirmación de reserva al usuario y al administrador
+- Formulario de contacto funcional
+
 
 <!-- Color Reference -->
 ### Color Reference 🎨 
 
 
-<img src="./src/Assets/Img/palette.png" alt="screenshot" />
+<img src="./src/Assets/Img/readme/Paleta-MenudaCiba.png" alt="Paleta de colores" />
 
 
 <!-- Getting Started -->
@@ -75,7 +85,7 @@ Presentación del proyecto -> https://www.canva.com/design/DAFGFqrxfrE/azfFyrenl
 Clona el proyecto
 
 ```bash
-  git clone https://github.com/mflamanna/CrochetCompany.git
+  git clone https://github.com/Niguisasola/menudaciba
 ```
 Instala las dependencias
 
@@ -89,6 +99,16 @@ Abre en el navegador
   npm start
 ```
 
+## Authors 🙋‍♀️​
+
+ [Florencia Lamanna](https://github.com/mflamanna)
+ <br>
+ [Nika Guisasola](https://github.com/Niguisasola)
+ <br>
+ [Laia Añó](https://github.com/laiaafernandez18)
+ <br>
+ [Rosa Becerra](https://github.com/RosaaBecerra)
+
 <!-- Contributing -->
 ## Contributing 👋 
 
@@ -100,6 +120,4 @@ Mira en el apartado de contacto para más información.
 <!-- Contact -->
 ## Contact 🤝 
 
-Florencia Lamanna - lamanna.mflorencia@gmail.com
-
-Project Link: [https://github.com/mflamanna/CrochetCompany.git]
+Menuda Ciba - menudaciba@gmail.com
