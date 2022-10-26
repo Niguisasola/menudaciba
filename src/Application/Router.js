@@ -10,7 +10,7 @@ import Team from "../pages/Team";
 import { onAuthStateChanged} from 'firebase/auth';
 import { auth } from '../components/IniciarSesion/firebase-config';
 
-export default function Router (){
+function Router (){
 
     useEffect(() => {
         onAuthStateChanged(auth, (currentUser) => {
@@ -39,3 +39,4 @@ export default function Router (){
     )
 }
 
+export default Router
