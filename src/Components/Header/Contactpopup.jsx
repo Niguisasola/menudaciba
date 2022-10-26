@@ -26,10 +26,10 @@ class Contactpopup extends React.Component {
           e.preventDefault();
           emailjs
             .sendForm(
-              'service_f6uat68',
-              'template_hz31ro6',
+              'service_zxmsq1w',
+              'template_g6brjbk',
               this.myRef.current,
-              'X5yYqiq0T_Uzamy6S')
+              '7i25jihTSnuTTYa_O')
             .then((result) => {
               console.log(result.text);
             }, (error) => {

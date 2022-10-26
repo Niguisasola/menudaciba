@@ -48,10 +48,10 @@ function Form() {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_f6uat68',
-        'template_sdjraqf',
+        'service_zxmsq1w',
+        'template_98citop',
         form.current,
-        'X5yYqiq0T_Uzamy6S')
+        '7i25jihTSnuTTYa_O')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
