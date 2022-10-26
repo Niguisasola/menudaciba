@@ -23,20 +23,6 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      Nombre: nombre,
-      Apellido: apellido,
-      Email: email,
-      Edad: edad,
-      Fecha: fecha,
-      Horario: horario,
-      Comentarios: comentarios,
-      Politicas: politicas
-    }
-    axios.post('https://sheet2api.com/v1/rycI7eBUTkaD/menudaciba', data).then((response) => {
-      console.log(response)
-
-    })
     sendEmail(e)
     handleFireBase(e)
   }
@@ -95,9 +81,8 @@ function Form() {
     e.preventDefault()
 
     const reservasCollRef = collection(db, "reservas")
-    addDoc(reservasCollRef, { nombre, apellido, email, edad, fecha, horario, comentarios }).then(response => {
-      console.log(response)
-    }).catch(error => {
+    addDoc(reservasCollRef, { nombre, apellido, email, edad, fecha, horario, comentarios })
+    .catch(error => {
       console.log(error.message)
     })
   }
@@ -123,13 +108,13 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" >
             Nom *
           </label>
-          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="nombre" type="text" placeholder="Ingresa tu nombre" name='nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
+          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="nombre" type="text" placeholder="Introduïu el vostre nom" name='nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-last-name">
             Cognom *
           </label>
-          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-last-name" type="text" placeholder="Ingresa tu apellido" name='apellido' onChange={(e) => setApellido(e.target.value)} value={apellido} />
+          <input required minLength="2" className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-last-name" type="text" placeholder="Introduïu el vostre cognom" name='apellido' onChange={(e) => setApellido(e.target.value)} value={apellido} />
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">
@@ -137,7 +122,7 @@ function Form() {
           <label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">
             E-mail *
           </label>
-          <input required className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="email" type="email" placeholder="Ingresa tu email" name='email' onChange={(e) => setEmail(e.target.value)} value={email} />
+          <input required className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="email" type="email" placeholder="Ingressa el teu email" name='email' onChange={(e) => setEmail(e.target.value)} value={email} />
         </div>
       </div>
       <div className="flex flex-wrap -mx-3 mb-6">

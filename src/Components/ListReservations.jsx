@@ -9,10 +9,6 @@ function ListReservations() {
         getReservas()
     }, [])
 
-    useEffect(() => {
-        console.log(reservas)
-    }, [reservas])
-
 
     const getReservas = () => {
         const reservaCollRef = collection(db, 'reservas')
@@ -29,66 +25,66 @@ function ListReservations() {
 
     return (
         <>
-            <section class="antialiased bg-gray-100 text-gray-600 h-screen px-4">
-                <div class="flex flex-col justify-center h-full">
-                    <div class="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
-                        <header class="px-4 py-4 border-b border-gray-100">
-                            <h2 class="font-semibold text-violeta-ciba text-xl">Reservas</h2>
+            <section className="antialiased bg-gray-100 text-gray-600 h-screen px-4">
+                <div className="flex flex-col justify-center h-full">
+                    <div className="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+                        <header className="px-4 py-4 border-b border-gray-100">
+                            <h2 className="font-semibold text-violeta-ciba text-xl">Reservas</h2>
                         </header>
-                        <div class="p-3">
-                            <div class="overflow-x-auto">
+                        <div className="p-3">
+                            <div className="overflow-x-auto">
                                 <table className='table-auto w-full'>
-                                    <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                                    <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                                         <tr>
-                                            <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Nom</div>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Nom</div>
                                             </th>
-                                            <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Cognom</div>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Cognom</div>
                                             </th>
-                                            <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Email</div>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Email</div>
                                             </th>
-                                            <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Edat nena/nen</div>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Edat nena/nen</div>
                                             </th>
-                                            <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Data</div>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Data</div>
                                             </th>
-                                            <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Horari</div>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Horari</div>
                                             </th>
-                                            <th class="p-2 whitespace-nowrap">
-                                                <div class="font-semibold text-left">Informació Complementària</div>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Informació Complementària</div>
                                             </th>
                                         </tr>
                                     </thead>
 
                                     {reservas.map(reserva =>
-                                        <tbody class="text-sm divide-y divide-gray-100">
+                                        <tbody className="text-sm divide-y divide-gray-100">
                                             <tr>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="flex items-center">
-                                                        <div key={reserva.id} class="font-medium text-gray-800">{reserva.data.nombre}</div>
+                                                <td className="p-2 whitespace-nowrap">
+                                                    <div className="flex items-center">
+                                                        <div className="font-medium text-gray-800">{reserva.data.nombre}</div>
                                                     </div>
                                                 </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">{reserva.data.apellido}</div>
+                                                <td className="p-2 whitespace-nowrap">
+                                                    <div className="text-left">{reserva.data.apellido}</div>
                                                 </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left font-medium text-violeta-ciba">{reserva.data.email}</div>
+                                                <td className="p-2 whitespace-nowrap">
+                                                    <div className="text-left font-medium text-violeta-ciba">{reserva.data.email}</div>
                                                 </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-lg text-left">{reserva.data.edad}</div>
+                                                <td className="p-2 whitespace-nowrap">
+                                                    <div className="text-lg text-left">{reserva.data.edad}</div>
                                                 </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">{reserva.data.fecha}</div>
+                                                <td className="p-2 whitespace-nowrap">
+                                                    <div className="text-left">{reserva.data.fecha}</div>
                                                 </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">{reserva.data.horario}</div>
+                                                <td className="p-2 whitespace-nowrap">
+                                                    <div className="text-left">{reserva.data.horario}</div>
                                                 </td>
-                                                <td class="p-2 whitespace-nowrap">
-                                                    <div class="text-left">{reserva.data.comentarios}</div>
+                                                <td className="p-2 whitespace-nowrap">
+                                                    <div className="text-left">{reserva.data.comentarios}</div>
                                                 </td>
                                             </tr>
                                         </tbody>

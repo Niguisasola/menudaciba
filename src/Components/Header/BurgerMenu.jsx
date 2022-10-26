@@ -36,10 +36,10 @@ export default function BurgerMenu() {
           </div>
           <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
             <li className="text-2xl border-b border-verde-ciba text-violeta-ciba my-8 uppercase">
-              <a href="/sobrenosotros">Sobre nosotros</a>
+              <a href="/sobrenosotros">Sobre Nosaltres</a>
             </li>
             <li className="text-2xl border-b border-verde-ciba text-violeta-ciba my-8 uppercase">
-              <a href="/equipo">Equipo</a>
+              <a href="/equipo">Equip</a>
             </li>
             <li className="text-2xl border-b border-verde-ciba text-violeta-ciba my-8 uppercase">
               <a href="/reservar">Reservar</a>
@@ -48,7 +48,7 @@ export default function BurgerMenu() {
               <BurgerContact />
             </li>
             <li className="text-2xl border-b border-verde-ciba text-violeta-ciba my-8 uppercase">
-              <a href="/login">Log In/Sign In</a>
+              <a href="/login">Log In Administradora</a>
             </li>
           </ul>
         </div>

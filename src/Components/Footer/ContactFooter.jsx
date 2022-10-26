@@ -63,21 +63,21 @@ class ContactFooter extends React.Component {
                     <ModalBody className='cardbody -mx-3 mb-6'>
                         <FormGroup className="w-full px-3 mb-6 md:mb-0">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Nom</Label>
-                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-name" type="text" placeholder="Ingresa tu nombre" name='nombre'></Input>
+                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-name" type="text" placeholder="Introduïu el vostre nom" name='nombre'></Input>
                         </FormGroup>
                         <FormGroup className="w-full px-3">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Telèfon de contacte</Label>
-                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-phone" type="text" placeholder="Ingresa tu teléfono" name='telefono' ></Input>
+                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="grid-phone" type="text" placeholder="Ingressa el teu telèfon" name='telefono' ></Input>
                         </FormGroup>
 
                         <FormGroup className="w-full px-3">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-email">Email</Label>
 
-                            <Input className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="email" type="email" placeholder="Ingresa tu email" name='email'></Input>
+                            <Input className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-alata" id="email" type="email" placeholder="Ingressa el teu email" name='email'></Input>
                         </FormGroup>
                         <FormGroup className="w-full px-3">
-                            <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlhtmlFor="grid-password">Missatge</Label>
-                            <Input className="no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 font-alata" id="message" placeholder="Ingresa tu comentario o información complementaria" name='mensaje'></Input>
+                            <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">Missatge</Label>
+                            <Input className="no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 font-alata" id="message" placeholder="Ingressa el teu comentari o informació complementària" name='mensaje'></Input>
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter className='className="col-sm-6'>
