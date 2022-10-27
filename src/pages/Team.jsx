@@ -5,7 +5,7 @@ import ContainerTeam from '../components/Team/ContainerTeam'
 
 function Team() {
   return (
-    <>
+    <div className='grid grid-rows-[auto_1fr_auto] h-screen'>
       <Header />
       <div>
       <div className='flex flex-col justify-center items-center'>
@@ -15,7 +15,7 @@ function Team() {
       <ContainerTeam />
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

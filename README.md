@@ -38,7 +38,8 @@ La finalidad de este proyecto es facilitar la reserva de citas para el canguraje
 
 
 <!-- Screenshots -->
-### Screenshots 📷 
+### Screenshots 📷
+
 
 <div align="center"> 
   <img src="./src/Assets/Img/figmaOrdenador.png" alt="screenshot" />
@@ -50,11 +51,12 @@ La finalidad de este proyecto es facilitar la reserva de citas para el canguraje
 <!-- TechStack -->
 ### Tech Stack 👾 
 
-- HTML
-- Tailwind
 - ReactJs (18.2.0)
-- Firebase (Authentication and Database)
-- EmailJS
+- Tailwind (3.2.1)
+- Axios (1.0.0)
+- React Router Dom (6.4.2)
+- Firebase (9.12.1)
+- EmailJS 
 - CallBell 
 
 <!-- Features -->

@@ -43,7 +43,7 @@ function Authentication() {
 
 
     return (
-        <div className=" flex justify-center m-4">
+        <div className=" flex justify-center m-4 self-center">
             <div className="w-full max-w-lg bg-lila-ciba p-4 rounded-lg mb-4" >
                 {loggedIn? null : <div>  <h3 className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mt-2 mb-2">Inicia Sessió</h3>
                 <div className='flex justify-center flex-wrap -mx-3 mb-6'>
