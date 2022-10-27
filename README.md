@@ -41,18 +41,17 @@ La finalidad de este proyecto es facilitar la reserva de citas para el canguraje
 ### Screenshots 📷
 
 
-<div align="center"> 
+<div> 
   <img src="./src/assets/img/home1.png" alt="screenshot" />
   <br>
-  <img src="./src/assets/img/home2.png" width="200" alt="screenshot" />
+  <img src="./src/assets/img/home2.png" alt="screenshot" />
 </div>
 
-<div className="flex">
-<img src="./src/assets/img/home-movil.png" alt="screenshot" />
+<div style="display: flex; justify-content: space-around"
+  <img src="./src/assets/img/home-movil.png" width="100" alt="screenshot" />
   <br>
-  <img src="./src/assets/img/home-movil2.png" width="200" alt="screenshot" />
+  <img src="./src/assets/img/home-movil2.png" width="100" alt="screenshot" />
 </div>
-
 
 <!-- TechStack -->
 ### Tech Stack 👾 
