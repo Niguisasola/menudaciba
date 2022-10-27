@@ -6,7 +6,8 @@
  https://menudaciba.netlify.app/
  <br>
  https://menuda-ciba.vercel.app/
-  
+ <br>
+ https://www.canva.com/design/DAFQBi4GXZ4/IW-M4zvClNHOMg5ZaBJ-Tw/view?utm_content=DAFQBi4GXZ4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
   
   </div>
 
@@ -31,7 +32,7 @@
 <!-- About the Project -->
 ## About the Project ⭐ 
 Menuda Ciba es una web de canguraje, para [La Ciba](https://laciba.gramenet.cat/es/) (centro de recursos para mujeres), ubicado en Santa Coloma de Gramenet, Barcelona.
-Particularmente pensado para familias monomarentales en situación de violencia, proceso de formación ,inserción laboral o necesidad de tiempo personal.
+Particularmente pensado para familias monomarentales en situación de violencia, proceso de formación, inserción laboral o necesidad de tiempo personal.
 La finalidad de este proyecto es facilitar la reserva de citas para el canguraje de manera fácil y rápida.
 
 
@@ -68,7 +69,7 @@ La finalidad de este proyecto es facilitar la reserva de citas para el canguraje
 - Diseño responsive
 - Contacto via Whatsapp
 - Registro de reservas en base de datos
-- Autenticación para el administrador
+- Autenticación para el administrador y almacenaje en local storage
 - Lista de reservas con vista protegida sólo para el administrador
 - Envío de email de confirmación de reserva al usuario y al administrador
 - Formulario de contacto funcional
