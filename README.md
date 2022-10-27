@@ -34,8 +34,6 @@ Menuda Ciba es una web de canguraje, para [La Ciba](https://laciba.gramenet.cat/
 Particularmente pensado para familias monomarentales en situación de violencia, proceso de formación ,inserción laboral o necesidad de tiempo personal.
 La finalidad de este proyecto es facilitar la reserva de citas para el canguraje de manera fácil y rápida.
 
-**Proyecto en proceso de desarrollo.*
-
 
 <!-- Screenshots -->
 ### Screenshots 📷
@@ -47,7 +45,7 @@ La finalidad de este proyecto es facilitar la reserva de citas para el canguraje
   <img src="./src/assets/img/home2.png" alt="screenshot" />
 </div>
 
-<div style="display: flex; justify-content: space-around"
+<div style="display: flex; justify-content: space-around">
   <img src="./src/assets/img/home-movil.png" width="100" alt="screenshot" />
   <br>
   <img src="./src/assets/img/home-movil2.png" width="100" alt="screenshot" />
