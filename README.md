@@ -42,9 +42,15 @@ La finalidad de este proyecto es facilitar la reserva de citas para el canguraje
 
 
 <div align="center"> 
-  <img src="./src/Assets/Img/figmaOrdenador.png" alt="screenshot" />
+  <img src="./src/assets/img/home1.png" alt="screenshot" />
   <br>
-  <img src="./src/Assets/Img/figmaMovil.png" width="200" alt="screenshot" />
+  <img src="./src/assets/img/home2.png" width="200" alt="screenshot" />
+</div>
+
+<div className="flex">
+<img src="./src/assets/img/home-movil.png" alt="screenshot" />
+  <br>
+  <img src="./src/assets/img/home-movil2.png" width="200" alt="screenshot" />
 </div>
 
 
@@ -75,7 +81,7 @@ La finalidad de este proyecto es facilitar la reserva de citas para el canguraje
 ### Color Reference 🎨 
 
 
-<img src="./src/Assets/Img/readme/Paleta-MenudaCiba.png" alt="Paleta de colores" />
+<img src="./src/assets/img/Paleta-MenudaCiba.png" alt="Paleta de colores" />
 
 
 <!-- Getting Started -->
