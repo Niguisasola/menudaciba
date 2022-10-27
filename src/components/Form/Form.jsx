@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import axios from 'axios';
 import Confirmation from './Confirmation'
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../IniciarSesion/firebase-config';

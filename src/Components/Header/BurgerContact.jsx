@@ -34,21 +34,21 @@ class BurgerContact extends React.Component {
                     <ModalBody className='cardbody -mx-3 mb-6'>
                         <FormGroup className="w-full px-3 mb-6 md:mb-0">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Nom</Label>
-                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-name" type="text" placeholder="Pepita" name='user_name'></Input>
+                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-name" type="text" placeholder="Introduïu el vostre nom" name='user_name'></Input>
                         </FormGroup>
                         <FormGroup className="w-full px-3">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2">Telèfon de contacte</Label>
-                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-phone" type="text" placeholder="03-03-456" name='phone' ></Input>
+                            <Input className="appearance-none block w-full bg-violet-100 text-grey-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-phone" type="text" placeholder="Ingressa el teu telèfon" name='phone' ></Input>
                         </FormGroup>
 
                         <FormGroup className="w-full px-3">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-email">Email</Label>
 
-                            <Input className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="pepita.lapistolera@gmail.com" name='email'></Input>
+                            <Input className="appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="Ingressa el teu email" name='email'></Input>
                         </FormGroup>
                         <FormGroup className="w-full px-3">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-xs font-bold mb-2" htmlFor="grid-password">Missatge</Label>
-                            <Input className="no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='info complementaria'></Input>
+                            <Input className="no-resize appearance-none block w-full bg-violet-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48" id="message" name='Ingressa el teu comentari o informació complementària'></Input>
                         </FormGroup>
                     </ModalBody>
                     <ModalFooter className='className="col-sm-6'>
