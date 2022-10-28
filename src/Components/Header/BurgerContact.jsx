@@ -26,7 +26,7 @@ class BurgerContact extends React.Component {
                     <ModalHeader className='flex justify-center'>
                         <FormGroup className="flex justify-center flex-col items-center">
                             <Label className="block uppercase tracking-wide text-violeta-ciba text-sm font-bold mb-2 justify-center">Envia'ns la teva consulta o contacta'ns via Whatsapp</Label>
-                            <a href='http://wa.link/85lcet'>
+                            <a href='https://www.whatsapp.com/?lang=es'>
                                 <img className='w-12 justify-center mt-2' src={iconWhatsapp} alt="Whatsapp" />
                             </a>
                         </FormGroup>
